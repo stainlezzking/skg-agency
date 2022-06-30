@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKG AGENCY | Hire web developers and graphic designer</title> 
+    <meta name="description" content="SKG Agency is one of the top business branding agencies in Nigeria. we create websites, flyers, posters, ID card, business packaging, stickers... for businesses">
+    <meta name="author" content="stainlezzking">
+    <!-- twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- <meta name="twitter:site" content="" /> username for the website biz -->
+    <meta name="twitter:creator" content="@stilkinging" />
+    <meta name="twitter:image:alt" content="the logo of SKG agency" />
+    <!-- can i just use the whatsapp url [down] to link str8 to whatsapp -->
+    <meta property="og:url" content="https://stainlezzking.com/" />
+    <meta property="og:title" content="IMPROVE YOUR BUSINESS BRAND" />
+    <meta property="og:description" content="we create websites for businesses or individuals to help reach your
+     customers around the world,we also create flyers, stickers, ID cards... all things graphics, click to cotact us" />
+    <meta property="og:image" content="https://stainlezzking.com/public/social-agency.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image" content="https://stainlezzking.com/public/social-agencyx400.png">
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="400" />
+    <!-- plain logo will be for og:image -->
+    <!-- logo + explaination will be for twitter and prolly linkedin [check linkedin dimensions again] -->
+    <!-- linkedin dimensions [1200 (w) x 627 (h) pixels  > recommended ratio > 1.91 : 1 ] [max:5mb] -->
+
+    <link rel="shortcut icon" href="./public/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./public/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <!-- ##  ## -->
+     <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+        :root {
+            --background-color : #f9f8f6;
+            --light-blue : #6c8ef3b2;
+            --light-green: #b4f36c9a;
+            --blue : #4169e1;
+            --dark-blue : #1226aa;
+            --gray : #454545;
+
+        }
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: var(--background-color);
+            color: var(--gray);
+            /* overflow-x: hidden; */
+        }
+        .btn-curve {
+          border-top-right-radius: 50px;
+          border-bottom-left-radius: 50px;
+          box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%) !important;
+        }
+        .caption h2, .navbar-brand{
+          font-family: 'Abril Fatface', cursive;
+        }
+        .skills-icons{
+          max-width: 150px;
+          display: block;
+        }
+        .shadow {
+          padding: 2rem;
+          background-color: white;
+        }
+        .section-paragraph{
+          max-width: 900px;
+          margin: 0 auto;
+        }
+        @media screen and (max-width: 600px){
+          #laptop {
+            max-height: 400px;
+          }
+          .caption{
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+          }
+          .caption h2{
+            margin-bottom: 1rem;
+          }
+          .caption h2, .caption p{
+            padding-left: 1rem !important;
+          }
+          .section-paragraph{
+            text-align: start !important;
+          }
+      
+        }
+        .fainted {
+          color: rgba(128, 128, 128, 0.644);
+          font-style: italic;
+        }
+        .title::after{
+          content: " ";
+          display: block;
+          width: 40px;
+          height: 5px;
+          background-color: var(--light-blue);
+          position: absolute;
+          left: calc(50% - 20px);
+      }
+      .card-radius {
+        border-radius: 25px;
+      }
+      #about::before{
+        content: " ";
+        display: block;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        position: absolute;
+        bottom: -100px;
+        left: -100px;
+        background-color: var(--light-blue);
+        z-index: -10;
+      }
+      #about::after{
+        content: " ";
+        display: block;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        top: -80px;
+        right: 20% !important;
+        background-color: var(--light-green);
+        border-radius: 5px;
+        z-index: -10;
+      }
+      .service{
+        z-index: -5;
+      }
+      .service img{
+        width: 70%;
+        display: block;
+        
+      }
+      section{
+        margin: 1.5rem 0;
+        padding: 1rem 0;
+      }
+      .card-image{
+        padding: 5px;
+        transition: border .5s ease-in;
+        border-radius: 4px;
+        width: 50px;
+        height: 50px;
+        margin-left: 1rem;
+        cursor: pointer;
+        position: relative;
+      }
+      .card-image::before{
+        content: "";
+        display: block;
+        background-color: var(--light-blue);
+        position: absolute; 
+        top: 0; 
+        left: -5px;
+        height: 100%;
+        z-index: -1;
+        width: 100%;
+        border-radius: 4px;
+      }
+
+      #worked-with .card::before{
+        content: "";
+        display: block;
+        position: absolute;
+        z-index: -1;
+        background-color: #9ab3ffb2;
+        height: 130%;
+        width: 130%;
+        left: -15%;
+        top: -15%;
+        border-radius: 50%;
+      }
+      .purple-before::before{
+        background-color:#f77ef7;
+      }
+      .client-image{
+        width: 100px;
+      }
+      #clients::before, #projects::before{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        position: absolute;
+        z-index: -4;
+      }
+      #projects a {
+        text-decoration: none;
+      }
+      #chooseUs img{
+          height: 30px;
+          opacity: .6;
+      }
+      /* #contact input{
+        border-top: none;
+        border-left: none;
+        border-right: none;
+      } */
+      /* #contact input:focus{
+         box-shadow: none; 
+      } */
+      /* COUPONFCNC */
+      #contact textarea{
+        height: 120px;
+      }
+      #contact img{
+        max-width: 100%;
+      }
+      #fixed{
+        bottom: 5%;
+        right: 5%;
+        width: 20%;
+        max-width: 60px;
+        cursor: pointer;
+        opacity: 0;
+        animation: showWhatsapp 2s 4s forwards;
+      }
+      #fixed img{
+        object-fit: cover;
+        width: 100%;
+      }
+      @keyframes showWhatsapp {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      #services li::before {
+        content: "*";
+      }
+     </style>
+</head>
+<body class="position-relative" >
+    <div class="bg-white">
+     <nav class="navbar container navbar-expand-lg navbar-light" id="navbar_top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">SKG AGENCY</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#about">ABOUT</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#services">SERVICES</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#projects">PROJECTS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#clients"> OUR CLIENTS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#contact">CONTACT US</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+     </nav>
+    </div>
+      <div class="container-fluid" id="top" >
+        <div class="row align-items-center">
+          <div class="col-12 col-md-5 order-md-5 pe-0">
+            <div class="d-flex justify-content-end">
+              <img src="./public/perfection.png" class="d-block col-4 col-md-4 align-self-end" id="perfect" alt="" srcset="">
+              <!-- <div class="col-0 col-sm-2 col-md-0"></div> -->
+              <img src="./public/laptop.png" class="d-block col-8 align-self-start" id="laptop" alt="image of the  tool we use at skg to build and manage business" srcset="">
+            </div>
+          </div>
+          <div class="col-12 col-md-7 order-md-1 caption">
+            <h2 class="display-6 display-sm-5 display-md-4 mb-4 ps-5"> LET's FLY YOUR BRAND, <br>
+              LET's REACH THE WORLD
+              </h2>
+              <p class="ps-5">
+                Our services has a proven record of <span class="text-success ">83%</span> increase in business reach, turnover and commensurate profit.
+                We are driven by a desire to give clients maximum value for their branding investments, helping their businesses reach its full potential as a result.
+              </p>
+              <a href="https://wa.me/message/EGWYLEIIIRY6I1" class="btn-curve btn btn-primary btn-lg px-5 py-3 ms-3 ms-md-5"> HIRE US</a>
+          </div>
+        </div>
+      </div>
+      <section class="skills container px-md-5 mt-3">
+        <div class="row gx-3 gy-4 px-3">
+          <div class="col-6 col-md-3">
+          <img src="./public/modern-design.png" alt="" class="skills-icons">
+          </div>
+          <div class="col-6 col-md-3">
+          <img src="./public/reliable.png"  alt="" class="skills-icons">
+          </div>
+          <div class="col-6 col-md-3">
+          <img src="./public/paint-ideas.png" alt="" class="skills-icons">
+          </div>
+          <div class="col-6 col-md-3">
+          <img src="./public/100-secure.png" alt="" class="skills-icons">
+          </div>
+        </div>
+      </section>
+    <section id="about" class="container bg-white px-4 py-5 my-4 shadow text-center position-relative card-radius">
+      <h2 class="title mx-auto position-relative mb-4 "> About Us</h2>
+      <p class="text-center section-paragraph"> 
+         SKG Agency has been around since 2015. We first started out as a graphic design organization, 
+         then gradually, like every business should, expanded into other areas of technology. <br>
+         With our team of highly skilled creative developers, we offer solutions that give businesses online presence
+         and create a strong brand image, thereby increasing their reach and appeal respectively.
+      </p>
+    </section>
+      <!-- should be all about qualities > 24/hrs services -->
+
+      <!-- services -->
+      <section id="services" class="container mb-5 ">
+        <h2 class="title mx-auto position-relative mb-4 text-center"> Our Services</h2>
+        <div class="container px-3">
+          <div class="row gx-3 justify-content-around gy-4">
+            <div class="col-sm-6 col-lg-4">
+              <div class="card service pt-3 card-radius shadow px-1">
+                <div class="card-image mx-auto">
+                  <img src="./public/webD.png" class="card-img-top my-2" alt="...">
+                </div>
+                <div class="card-body">
+                  <div class="card-title text-center fw-bold text-uppercase"> Web development</div>
+                  <p class="card-text"> 
+                    <ul>
+                      <li class="d-inline-block ">Business website</li>
+                      <li class="d-inline-block ">Banking website</li>
+                      <li class="d-inline-block ">Church website</li>
+                      <li class="d-inline-block ">School website</li>
+                      <li class="d-inline-block ">Bitcoin website</li>
+                      <li class="d-inline-block ">Exam website</li>
+                      <li class="d-inline-block ">Managing website</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4">
+              <div class="card service pt-3 card-radius shadow px-1">
+                <div class="card-image purple-before mx-auto">
+                  <img src="./public/design.png" class="card-img-top my-2" alt="...">
+                </div>
+                <div class="card-body">
+                  <div class="card-title fw-bold text-uppercase text-center"> Graphic design</div>
+                  <p class="card-text"> 
+                    <ul>
+                      <li class="d-inline-block px-1">Logo</li>
+                      <li class="d-inline-block px-1">Business Card</li>
+                      <li class="d-inline-block px-1">ID card</li>
+                      <li class="d-inline-block px-1">Banners</li>
+                      <li class="d-inline-block px-1">Flyers</li>
+                      <li class="d-inline-block px-1">Brand arts</li>
+                      <li class="d-inline-block px-1">Events Ticket</li>
+                      <li class="d-inline-block px-1">Textbook covers</li>
+                      <li class="d-inline-block px-1">music cover</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="clients" class="py-5 position-relative">
+        <!-- give this bg-white up up -->
+          <h2 class="title mx-auto position-relative mb-4 text-center mt-3"> Our Clients</h2>
+        <div class="container">
+          <p class="text-center px-md-5"> 
+            most of our clients are individuals who want a one time job, or business/ institutions
+            like schools, churches who hire us to provide any of our expert services.
+          </p>
+            <div id="worked-with" class="row gy-5 justify-content-center gx-2 px-2 mb-3">
+              <!-- here should contain the logos in cards or any design you come up with of the company's i have worked with -->
+              <h5 class="fainted text-center small"> Some of our clients</h5>
+              <div class="col-sm-6 col-lg-4 justify-content-center d-flex position-relative">
+                <div class="card d-inline-block mx-auto p-3">
+                  <img class="client-image" src="https://temenosglobal.com/assets/images/temenos.png" alt="the logo of temenosglobal, a huge investment firm">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 justify-content-center d-flex position-relative">
+                <div class="card d-inline-block mx-auto p-3">
+                  <img class="client-image" src="https://1.bp.blogspot.com/-aAu5_ZeS0R4/XQiYc4LM_8I/AAAAAAAAEMM/zH-M9_Wxw4camAInwp2A4CzgcriHva5LQCLcBGAs/s1600/UNIZIK%2BJUPEB%2BForm%2Bis%2BOut-%2BRequirements%252C%2BPrice%2Band%2BHow%2Bto%2BApply.png" alt="">
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 justify-content-center d-flex position-relative">
+                <div class="card d-inline-block mx-auto p-3 " style="height: 134px; width: 134px;">
+                  <img class="d-block mx-auto" height="100px" src="./public/dosAll.png " alt="DOSAll logo, a company that produce varieties of product, from detergent to perfumes">
+                </div>
+              </div>
+            </div>
+          </div>
+      </section>
+
+      <section id="chooseUs" class="container pt-5">
+        <h2 class="small fw-bold mx-auto position-relative mb-4 text-center text-primary">why choose us</h2>
+        <!--  light text from psd pix with same height documents -->
+        <div class="row gy-4 text-center py-2 gx-4 px-2">
+          <div class="col-6 col-md-4"><img src="./public/why-us_0005_24hrssupport.png" alt="we have 24 hours support to our customers from monday to sunday"></div>
+          <div class="col-6 col-md-4"><img src="./public/why-us_0000_deliverOT.png" alt="at skg agency we deliver on time"></div>
+          <div class="col-6 col-md-4"><img src="./public/why-us_0004_weusthe.png" alt="we use the latest technology when carrying out our services"></div>
+          <div class="col-6 col-md-4"><img src="./public/why-us_0001_innovatives.png" alt="we have a team of the most innovative and creative minds of the industry"></div>
+          <div class="col-6 col-md-4"><img src="./public/why-us_0002_healthyRelationships.png" alt="at skg agency we keep healthy relationships with our customers"></div>
+          <div class="col-6 col-md-4"><img src="./public/why-us_0003_wepay.png" alt=" we pay attention to details of our clients at skg agency"></div>
+        </div>
+      </section>
+
+      <section id="projects" class="position-relative">`
+        <h2 class="title mx-auto position-relative text-center"> projects</h2>
+        <small class="small text-center d-block text-primary"> some of our completed & on going projects</small>
+        <div class="container mt-4">
+          <div class="row gx-2 gy-2 justify-content-center">
+            <div class="col-6 col-md-4">
+              <div class="card pt-4">
+                  <img src="./public/evich.png" width="80px"  alt="logo of evich stores" class="mx-auto">
+                <div class="card-body">
+                  <div class="card-title text-center"> 
+                    <a href="http://evichstores.com" class="d-block">
+                      evich stores 
+                    </a>
+                  </div>
+                  <!-- text-center fw-bold -->
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="card pt-4">
+                  <img src="https://temenosglobal.com/assets/images/temenos.png" width="35px" alt="logo of evich stores" class="mx-auto">
+                <div class="card-body">
+                  <div class="card-title text-center"> 
+                    <a href="http://temenosglobal.com" class="d-block">
+                      temenosglobal btc
+                    </a>
+                  </div>
+                  <!-- text-center fw-bold -->
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="card pt-4">
+                  <img height="35px" src="https://1.bp.blogspot.com/-aAu5_ZeS0R4/XQiYc4LM_8I/AAAAAAAAEMM/zH-M9_Wxw4camAInwp2A4CzgcriHva5LQCLcBGAs/s1600/UNIZIK%2BJUPEB%2BForm%2Bis%2BOut-%2BRequirements%252C%2BPrice%2Band%2BHow%2Bto%2BApply.png"  alt="nnamdi azikiwe university logo" class="mx-auto">
+                <div class="card-body">
+                  <div class="card-title text-center"> 
+                    <a href="https://unizik-id.herokuapp.com/" class="d-block">
+                      unizik ID generator
+                    </a>
+                  </div>
+                  <!-- text-center fw-bold -->
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="card pt-4">
+                  <img src="https://www.cenuelconstruction.com/images/logo1.png" width="80px" alt="logo of evich stores" class="mx-auto">
+                <div class="card-body">
+                  <div class="card-title text-center"> 
+                    <a href="https://www.cenuelconstruction.com/" class="d-block">
+                      Real Estate 
+                      <!-- portfolio site -->
+                    </a>
+                  </div>
+                  <!-- text-center fw-bold -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- projects should go into here -->
+        <!-- 
+          ### web ###
+          www.evichstores.com/
+          www.cenuelconstruction.com/
+          https://alexjohnsonf.com/
+          temenosglobal.com
+          ### graphic ##
+          https://alexjohnsonf.com/assets/img/favicon.png
+         -->
+         <a href="https://wa.me/message/EGWYLEIIIRY6I1" class="text-center text-decoration-none d-block small my-4"> more projects...</a>
+      </section>
+
+      <section id="contact" class="position-relative">
+        <div class="container">
+          <div class="row py-4 gx-3 px-2 gy-4">
+            <div class="col-sm-6 d-flex align-items-center" >
+              <!-- this is where the image for the contact goes -->
+              <img src="./public/customer.png" alt="leave us an email at skg care agency" srcset="">
+            </div>
+            <div class="col-sm-6 px-3 px-md-5 py-5 bg-white">
+              <!-- contact information -->
+              <h2 class="text-primary mb-4"> Send us an Email</h2>
+              <form method="GET" action="mailto:azukachukwuebuka07@gmail.com">
+                <div class="mb-3">
+                  <input type="text" name="subject" placeholder="subject of email" class="form-control" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <textarea name="body" class="form-control" placeholder="body of email"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary text-white d-block ms-auto w-100">send</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <a id="fixed" href="https://wa.me/message/EGWYLEIIIRY6I1" class="position-fixed d-flex" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="whatsapp">
+        <img src="./public/wa.png" class="w-100" alt="whatsapp logo to click and contact us in whatsapp (skg agency)" >
+      </a>
+      <footer class="bg-dark text-white ">
+     <div class="container py-5">
+      <div class="row">
+        <div class="text-center col-12 my-3 text-light"> &copy; stainlezzking 2022</div>
+        <div class="col-sm-6 mb-3">
+          <h5 class="fw-bold text-light"> Short links</h5>
+          <a href="#top" class="d-block  text-white">Top</a>
+          <a href="#about" class="d-block  text-white">About</a>
+          <a href="#services" class="d-block  text-white">Services</a>
+          <a href="#projects" class="d-block  text-white">Project</a>
+          <a href="#contact" class="d-block  text-white">contact</a>
+        </div>
+        <div class="col-sm-6">
+          <h5 class="fw-bold text-light"> Contact us</h5>
+          <a href="https://wa.me/message/EGWYLEIIIRY6I1" class="d-block  text-white">Whatsapp</a>
+          <a href="mailto:azukachukwuebuka07@gmail.com" class="d-block  text-white"> azukachukwuebuka07@gmail.com</a>
+        </div>
+      </div>
+     </div>
+      </footer>
+    <script src="./public/bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+
+</body>
+</html>
